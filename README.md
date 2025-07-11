@@ -1,7 +1,3 @@
-Here's a `README.md` file content that you can use for your GitHub project, providing a detailed description, explanation, and code snippets:
-
------
-
 # Simple Chatbot with Gemini Flash and Streamlit
 
 This project demonstrates a basic yet functional chatbot application built using **Streamlit** for the user interface and powered by **Google's Gemini 2.0 Flash Large Language Model (LLM)**. It's designed to be a straightforward example of integrating advanced conversational AI into a user-friendly web application.
@@ -149,12 +145,17 @@ if input_text:
 
 ### Key Components:
 
-  * **`load_dotenv()`**: This function from the `dotenv` library loads variables from your `.env` file into the environment, making your API key accessible without hardcoding it.
-  * **`ChatGoogleGenerativeAI`**: This is the core component for interacting with Google's Generative AI models. We specify `model='gemini-2.0-flash'` to use the fast and efficient Gemini Flash model. Parameters like `temperature`, `max_tokens`, `timeout`, and `max_retries` control the behavior and performance of the LLM.
-  * **`ChatPromptTemplate.from_messages`**: This creates a structured prompt for the LLM. The "system" message sets the overall context or persona for the chatbot (e.g., "you are a chat bot"), while the "human" message contains the actual user query.
-  * **`StrOutputParser`**: After the LLM generates a response, this parser simply converts the output into a plain string, which is then displayed by Streamlit.
-  * **`prompt | llm | output_parser`**: This is the LangChain "chain" syntax. It defines a sequential flow: the `prompt` prepares the input, the `llm` processes it, and the `output_parser` formats the result.
-  * **Streamlit UI (`st.title`, `st.text_input`, `st.write`)**: These functions create the web interface elements. `st.text_input` captures the user's question, and `st.write` displays the chatbot's response.
+ ***load_dotenv(): This function from the dotenv library loads variables from your .env file into the environment, making your API key accessible without hardcoding it.
+
+***ChatGoogleGenerativeAI: This is the core component for interacting with Google's Generative AI models. We specify model='gemini-2.0-flash' to use the fast and efficient Gemini Flash model. Parameters like temperature, max_tokens, timeout, and max_retries control the behavior and performance of the LLM.
+
+***ChatPromptTemplate.from_messages: This creates a structured prompt for the LLM. The "system" message sets the overall context or persona for the chatbot (e.g., "you are a chat bot"), while the "human" message contains the actual user query.
+
+***StrOutputParser: After the LLM generates a response, this parser simply converts the output into a plain string, which is then displayed by Streamlit.
+
+***prompt | llm | output_parser: This is the LangChain "chain" syntax. It defines a sequential flow: the prompt prepares the input, the llm processes it, and the output_parser formats the result.
+
+***Streamlit UI (st.title, st.text_input, st.write): These functions create the web interface elements. st.text_input captures the user's question, and st.write displays the chatbot's response.
 
 ## ✨ How to Contribute
 
