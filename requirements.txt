@@ -1,0 +1,8 @@
+streamlit~=1.45.1
+langchain
+langchain-google-genai~=2.1.5
+pillow
+load_dotenv
+langchain-community
+python-dotenv~=1.1.0
+langchain-core~=0.3.63
